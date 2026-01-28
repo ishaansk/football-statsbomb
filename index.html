@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatsBomb Event Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+                <h1>StatsBomb <span>Explorer</span></h1>
+            </div>
+            <div class="header-controls">
+                <div class="glass-select-wrapper">
+                    <select id="competition-select">
+                        <option value="" disabled selected>Select Competition</option>
+                    </select>
+                </div>
+                <div class="glass-select-wrapper">
+                    <select id="season-select" disabled>
+                        <option value="" disabled selected>Select Season</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="matches-section" class="panel">
+                <div class="panel-header">
+                    <h2>Available Matches</h2>
+                </div>
+                <div id="matches-grid" class="matches-grid">
+                    <div class="placeholder-text">Select a competition and season to view matches.</div>
+                </div>
+            </section>
+
+            <section id="events-section" class="panel hidden">
+                <div class="panel-header">
+                    <button id="back-to-matches" class="btn-icon"><i class="fas fa-arrow-left"></i></button>
+                    <h2 id="match-title">Match Events</h2>
+                    <div class="header-actions">
+                        <div class="search-wrapper">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="event-search" placeholder="Search events...">
+                        </div>
+                        <button id="toggle-viz" class="btn-primary">Toggle Pitch View</button>
+                    </div>
+                </div>
+
+                <div id="viz-container" class="viz-container hidden">
+                    <div class="pitch-card">
+                        <canvas id="pitch-canvas"></canvas>
+                        <div class="viz-overlay">
+                            <div class="viz-stats">
+                                <div class="stat-item"><span id="total-events-count">0</span> Events shown</div>
+                                <div class="stat-item"><span id="active-filter-type">All</span></div>
+                            </div>
+                            <div class="viz-legend" id="viz-legend">
+                                <!-- Legend items -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pitch-filters">
+                        <h3>Plot Events</h3>
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-type="all">All</button>
+                            <button class="filter-btn" data-type="Pass">Passes</button>
+                            <button class="filter-btn" data-type="Shot">Shots</button>
+                            <button class="filter-btn" data-type="Dribble">Dribbles</button>
+                            <button class="filter-btn" data-type="Interception">Defensive</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="events-table">
+                        <thead>
+                            <tr>
+                                <th>Minute</th>
+                                <th>Team</th>
+                                <th>Player</th>
+                                <th>Type</th>
+                                <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody id="events-body">
+                            <!-- Events will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <div id="loading-overlay" class="hidden">
+            <div class="loader"></div>
+            <p>Fetching Data...</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
