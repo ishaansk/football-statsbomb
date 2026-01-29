@@ -2,6 +2,8 @@
 
 A premium, interactive web application to visualize and explore open-access football data provided by **StatsBomb**. This tool allows users to browse competitions, matches, and visualize event-level data (passes, shots, dribbles, etc.) on an interactive pitch.
 
+🔗 **Live Demo: [footballviz-ishaansk.vercel.app](https://footballviz-ishaansk.vercel.app)**
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Framework: Flask](https://img.shields.io/badge/Framework-Flask-lightgrey.svg)
@@ -57,6 +59,8 @@ A premium, interactive web application to visualize and explore open-access foot
 
 ## 🌍 Deployment
 
+The project is live at: **[footballviz-ishaansk.vercel.app](https://footballviz-ishaansk.vercel.app)**
+
 This project is optimized for **Vercel**. 
 
 - The backend is located in `api/index.py` (Serverless Function).
@@ -65,9 +69,6 @@ This project is optimized for **Vercel**.
 
 Simply connect your GitHub repository to Vercel and it will deploy automatically.
 
-## 📸 Preview
-
-*To add a preview, run the app locally and take a screenshot of the pitch visualization, then save it as `preview.png` in the root directory.*
 
 ## 📄 License
 
