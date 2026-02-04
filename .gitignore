@@ -1,9 +1,23 @@
-.venv/
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
 .DS_Store
-node_modules/
-dist/
+Thumbs.db
+
+# Env
 .env
-.vercel/
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

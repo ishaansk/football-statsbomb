@@ -1,78 +1,42 @@
-# ⚽ StatsBomb Football Event Explorer
+# sv
 
-A premium, interactive web application to visualize and explore open-access football data provided by **StatsBomb**. This tool allows users to browse competitions, matches, and visualize event-level data (passes, shots, dribbles, etc.) on an interactive pitch.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-🔗 **Live Demo: [football-ishaansk.vercel.app](https://football-ishaansk.vercel.app)**
+## Creating a project
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Framework: Flask](https://img.shields.io/badge/Framework-Flask-lightgrey.svg)
-![Deployment: Vercel](https://img.shields.io/badge/Deployment-Vercel-black.svg)
+If you're seeing this, you've probably already done this step. Congrats!
 
-## ✨ Features
+```sh
+# create a new project
+npx sv create my-app
+```
 
-- **Match Browser**: Navigate through different leagues (La Liga, Champions League, etc.) and seasons.
-- **Event Visualization**: Interactive 2D pitch visualization of match events.
-- **Smart Filtering**: Filter events by type: Passes, Shots, Dribbles, or Defensive actions.
-- **Team-Specific Perspectives**: Automatically flips coordinates for the away team to provide a realistic match view.
-- **Searchable Event Logs**: Real-time search/filter through full match event logs.
-- **Modern UI**: Dark-themed, glassmorphic design built for a premium feel.
+To recreate this project with the same configuration:
 
-## 🛠️ Tech Stack
+```sh
+# recreate this project
+npx sv create --template minimal --no-types --install npm .
+```
 
-- **Backend**: Flask (Python)
-- **Frontend**: Vanilla JavaScript, CSS3 (Glassmorphism), HTML5 Canvas
-- **Data Source**: `statsbombpy` (StatsBomb Open Data)
-- **Deployment**: Configured for Vercel Serverless Functions
+## Developing
 
-## 🚀 Getting Started
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-### Prerequisites
+```sh
+npm run dev
 
-- Python 3.9 or higher
-- A virtual environment (recommended)
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-### Local Development
+## Building
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/ishaansk/football-visualiser.git
-   cd football-visualiser
-   ```
+To create a production version of your app:
 
-2. **Set up virtual environment**:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   ```
+```sh
+npm run build
+```
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+You can preview the production build with `npm run preview`.
 
-4. **Run the application**:
-   ```bash
-   python api/index.py
-   ```
-   The app will be available at `http://localhost:5000`.
-
-## 🌍 Deployment
-
-The project is live at: **[football-ishaansk.vercel.app](https://football-ishaansk.vercel.app)**
-
-This project is optimized for **Vercel**. 
-
-- The backend is located in `api/index.py` (Serverless Function).
-- The frontend is served as high-performance static files.
-- Configuration is handled in `vercel.json`.
-
-Simply connect your GitHub repository to Vercel and it will deploy automatically.
-
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Developed for football analytics enthusiasts.*
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
